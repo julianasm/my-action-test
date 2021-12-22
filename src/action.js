@@ -10,8 +10,9 @@ async function run() {
 
     const randomPos = Math.round(Math.random() * 50);
     const url = `https://api.tenor.com/v1/search?=thank%20you&pos=${randomPos}&limit=1&media_filter=minimal&contentfilter=high&key=${TENOR_TOKEN}`
-    console.log(response)
+    
     const response = await fetch(url);
+    console.log(response)
     const { results } = await response.json();
     const gifUrl = results[0].media[0].tinygif.url;
 
