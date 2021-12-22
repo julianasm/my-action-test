@@ -8,7 +8,7 @@ async function run() {
     const octokit = github.getOctokit(GITHUB_TOKEN);
 
     const { context = {} } = github;
-    const { pull_request } = context.payloads;
+    const { pull_request } = context.payload;
 
     await octokit.issues.createComment({
         ...context.repo,
