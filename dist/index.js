@@ -11489,6 +11489,7 @@ async function run() {
 
     const randomPos = Math.floor(Math.random() * 10);
     const url = `https://api.tenor.com/v1/search?=thank%20you&pos=${randomPos}&limit=1&media_filter=minimal&contentfilter=high&key=${TENOR_TOKEN}`
+    var gifUrl;
 
     await axios.get(url).then(function (response) {
         let request_data = response.data.results;
