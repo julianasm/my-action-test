@@ -11488,12 +11488,11 @@ async function run() {
     const TENOR_TOKEN = core.getInput('TENOR_TOKEN');
 
     const randomPos = Math.floor(Math.random() * 100);
-    const url = `https://api.tenor.com/v1/search?=thank%20you&pos=${randomPos}&limit=1&media_filter=minimal&contentfilter=high&key=${TENOR_TOKEN}`
+    const url = `https://api.tenor.com/v1/search?q=thank%20you&pos=${randomPos}&limit=1&media_filter=minimal&contentfilter=high&key=${TENOR_TOKEN}`;
     var gifUrl;
 
     await axios.get(url).then(function (response) {
         let request_data = response.data.results;
-        console.log(request_data)
         gifUrl = request_data[0].media[0].tinygif.url;
     }).catch(function (error) {
         console.log(error)
