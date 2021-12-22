@@ -13,6 +13,7 @@ async function run() {
 
     await axios.get(url).then(function (response) {
         let request_data = response.data.results;
+        console.log(request_data)
         gifUrl = request_data[0].media[0].tinygif.url;
     }).catch(function (error) {
         console.log(error)
