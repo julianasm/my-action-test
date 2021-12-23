@@ -30,31 +30,6 @@ async function run() {
         issue_number: pull_request.number,
         body: `Thank you for submitting a pull request! We will try to review this as soon as we can.\n\n<img src="${gifUrl}" alt="thank you">`
     });
-
-    const {TwitterClient} = require('twitter-api-client');
-
-    const tweet = async (status) => {
-        const twitterClient = new TwitterClient({
-        apiKey: process.env.TWITTER_API_KEY,
-        apiSecret: process.env.TWITTER_API_SECRET,
-        accessToken: process.env.TWITTER_API_ACCESS_TOKEN,
-        accessTokenSecret: process.env.TWITTER_ACCESS_TOKEN_SECRET,
-    });
-
-    await twitterClient.tweets.statusesUpdate({status});
-    };
-
-    (async () => {
-    try {
-    const myTweet = 
-          'Teste';
-
-        await tweet(myTweet);
-    } catch (err) {
-        console.error(err);
-    }
-})();
-
 }
 
 
