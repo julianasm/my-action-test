@@ -1,6 +1,6 @@
 on:
   pull_request:
-    types: [closed]
+    types: [closed, closed, reopened]
     branches:
       - main
       - master

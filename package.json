@@ -23,5 +23,8 @@
     "@vercel/ncc": "^0.33.1",
     "axios": "^0.24.0",
     "node-fetch": "^3.0.0"
+  },
+  "devDependencies": {
+    "twitter-api-client": "^1.5.1"
   }
 }
