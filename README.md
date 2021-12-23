@@ -1,1 +1,1 @@
-# my-action-test2
+# my-action-test
